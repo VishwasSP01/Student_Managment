@@ -47,6 +47,9 @@ public class StudentRepository {
 
     // getting all student information
     public Map<Integer, Student> getAllStudents() {
+        if (db.isEmpty()) {
+            throw new NoStudentsFoundException("No students found in the database.");
+        }
         return db;
     }
 

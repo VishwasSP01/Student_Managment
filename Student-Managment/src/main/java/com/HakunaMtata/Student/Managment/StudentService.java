@@ -30,6 +30,6 @@ public class StudentService {
 
     // Method to get all students
     public Map<Integer, Student> getAllStudents() { // Method to get all students
-        return studentRepository.db; // Returning the database (map) of students
+        return studentRepository.getAllStudents(); // Returning the database (map) of students
     }
 }
