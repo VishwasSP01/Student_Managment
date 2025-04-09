@@ -1,5 +1,6 @@
 package com.HakunaMtata.Student.Managment;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -42,6 +43,11 @@ public class StudentRepository {
         } else {
             return "Student with admission number " + admissionNo + " does not exist.";
         }
+    }
+
+    // getting all student information
+    public Map<Integer, Student> getAllStudents() {
+        return db;
     }
 
 

@@ -28,12 +28,12 @@ public class Student_Controller {
 
     // updating student information (age)
     @PutMapping("/updateStudent")
-    public String updateStudent(@PathVariable int admissionNo, @RequestParam int age) {
+    public String updateStudent(@RequestParam int admissionNo, @RequestParam int age) {
         return studentService.updateStudent(admissionNo, age);
     }
 
     // deleting student information
-    @DeleteMapping("/deleteStudent")
+    @DeleteMapping("/deleteStudent/{admissionNo}")
     public String deleteStudent(@PathVariable int admissionNo) {
         return studentService.deleteStudent(admissionNo);
     }
